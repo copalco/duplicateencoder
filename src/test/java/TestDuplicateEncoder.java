@@ -15,7 +15,7 @@ public class TestDuplicateEncoder {
 
     @Test
     public void encodesEachUniqueCharAsOpeningParenthesis() {
-        assertEquals("(((", encodeDuplicates("aaa"));
+        assertEquals("(((", encodeDuplicates("abc"));
     }
 
     private String encodeDuplicates(String str) {
