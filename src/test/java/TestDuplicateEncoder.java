@@ -29,12 +29,16 @@ public class TestDuplicateEncoder {
             return encoded;
         }
         for (String c: str.split("")) {
-            if (str.indexOf(c) != str.lastIndexOf(c)) {
+            if (isDuplicate(c, str)) {
                 encoded += ")";
             } else {
                 encoded += "(";
             }
         }
         return encoded;
+    }
+
+    private boolean isDuplicate(String c, String str) {
+        return str.indexOf(c) != str.lastIndexOf(c);
     }
 }
