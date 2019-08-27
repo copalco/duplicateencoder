@@ -29,11 +29,7 @@ public class TestDuplicateEncoder {
             return encoded;
         }
         for (String c: str.split("")) {
-            if (isDuplicate(c, str)) {
-                encoded += ")";
-            } else {
-                encoded += "(";
-            }
+            encoded += isDuplicate(c, str) ? ")" : "(";
         }
         return encoded;
     }
