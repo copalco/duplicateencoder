@@ -14,10 +14,10 @@ public class TestDuplicateEncoder {
     }
 
     private String encodeDuplicates(String str) {
+        String encoded = "(";
         if (str.isEmpty()) {
             return str;
         }
-        String encoded = "(";
         return encoded;
     }
 }
