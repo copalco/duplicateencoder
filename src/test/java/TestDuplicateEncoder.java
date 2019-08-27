@@ -26,17 +26,7 @@ public class TestDuplicateEncoder {
 
     private String encodeDuplicates(String str) {
         Encoder encoder = new Encoder();
-        if (str.isEmpty()) {
-            return "";
-        }
-        String encoded = "";
-        for (String character: str.split("")) {
-            encoded += isDuplicate(character, str) ? ")" : "(";
-        }
-        return encoded;
+        return encoder.encode(str);
     }
 
-    private boolean isDuplicate(String character, String str) {
-        return str.indexOf(character) != str.lastIndexOf(character);
-    }
 }
