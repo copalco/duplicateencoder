@@ -18,13 +18,22 @@ public class TestDuplicateEncoder {
         assertEquals("(((", encodeDuplicates("abc"));
     }
 
+    @Test
+    public void encodeNonUniqueCharsAsClosedParenthesis() {
+        assertEquals("()()", encodeDuplicates("abcb"));
+    }
+
     private String encodeDuplicates(String str) {
         String encoded = "";
         if (str.isEmpty()) {
             return encoded;
         }
         for (String c: str.split("")) {
-            encoded += "(";
+            if (str.indexOf(c) != str.lastIndexOf(c)) {
+                encoded += ")";
+            } else {
+                encoded += "(";
+            }
         }
         return encoded;
     }
