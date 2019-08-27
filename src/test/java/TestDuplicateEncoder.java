@@ -28,13 +28,13 @@ public class TestDuplicateEncoder {
             return "";
         }
         String encoded = "";
-        for (String c: str.split("")) {
-            encoded += isDuplicate(c, str) ? ")" : "(";
+        for (String character: str.split("")) {
+            encoded += isDuplicate(character, str) ? ")" : "(";
         }
         return encoded;
     }
 
-    private boolean isDuplicate(String c, String str) {
-        return str.indexOf(c) != str.lastIndexOf(c);
+    private boolean isDuplicate(String character, String str) {
+        return str.indexOf(character) != str.lastIndexOf(character);
     }
 }
