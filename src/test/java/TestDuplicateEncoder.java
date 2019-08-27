@@ -8,7 +8,15 @@ public class TestDuplicateEncoder {
         assertEquals("(", encodeDuplicates("a"));
     }
 
+    @Test
+    public void noParenthesisFromEmptyString() {
+        assertEquals("", encodeDuplicates(""));
+    }
+
     private String encodeDuplicates(String str) {
+        if (str.isEmpty()) {
+            return str;
+        }
         return "(";
     }
 }
