@@ -14,9 +14,9 @@ public class TestDuplicateEncoder {
     }
 
     private String encodeDuplicates(String str) {
-        String encoded = "(";
-        if (str.isEmpty()) {
-            encoded = "";
+        String encoded = "";
+        if (!str.isEmpty()) {
+            encoded = "(";
         }
         return encoded;
     }
