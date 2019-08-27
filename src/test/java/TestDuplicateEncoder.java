@@ -1,3 +1,4 @@
+import duplicateencoder.Encoder;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -24,6 +25,7 @@ public class TestDuplicateEncoder {
     }
 
     private String encodeDuplicates(String str) {
+        Encoder encoder = new Encoder();
         if (str.isEmpty()) {
             return "";
         }
