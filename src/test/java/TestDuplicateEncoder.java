@@ -13,10 +13,18 @@ public class TestDuplicateEncoder {
         assertEquals("", encodeDuplicates(""));
     }
 
+    @Test
+    public void encodesEachUniqueCharAsOpeningParenthesis() {
+        assertEquals("(((", encodeDuplicates("aaa"));
+    }
+
     private String encodeDuplicates(String str) {
         String encoded = "";
-        if (!str.isEmpty()) {
-            encoded = "(";
+        if (str.isEmpty()) {
+            return encoded;
+        }
+        for (String c: str.split("")) {
+            encoded += "(";
         }
         return encoded;
     }
