@@ -4,11 +4,11 @@ import static org.junit.Assert.assertEquals;
 
 public class TestDuplicateEncoder {
     @Test
-    public void encodesUniqueCharsAsOpeningParenthesis() {
-        assertEquals("(((", encodeDuplicates("abc"));
+    public void encodesUniqueCharAsOpeningParenthesis() {
+        assertEquals("(", encodeDuplicates("a"));
     }
 
     private String encodeDuplicates(String str) {
-        return "(((";
+        return "(";
     }
 }
