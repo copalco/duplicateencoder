@@ -1,4 +1,4 @@
-import duplicateencoder.Encoder;
+import duplicateencoder.DuplicateEncoder;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -25,7 +25,7 @@ public class TestDuplicateEncoder {
     }
 
     private String encodeDuplicates(String str) {
-        Encoder encoder = new Encoder();
+        DuplicateEncoder encoder = new DuplicateEncoder();
         return encoder.encode(str);
     }
 

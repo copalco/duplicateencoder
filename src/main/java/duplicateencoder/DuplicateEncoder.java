@@ -1,6 +1,6 @@
 package duplicateencoder;
 
-public class Encoder {
+public class DuplicateEncoder {
 
     public String encode(String str) {
         if (str.isEmpty()) {
