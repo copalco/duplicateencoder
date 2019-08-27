@@ -17,6 +17,7 @@ public class TestDuplicateEncoder {
         if (str.isEmpty()) {
             return str;
         }
-        return "(";
+        String encoded = "(";
+        return encoded;
     }
 }
