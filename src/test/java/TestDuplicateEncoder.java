@@ -24,10 +24,10 @@ public class TestDuplicateEncoder {
     }
 
     private String encodeDuplicates(String str) {
-        String encoded = "";
         if (str.isEmpty()) {
-            return encoded;
+            return "";
         }
+        String encoded = "";
         for (String c: str.split("")) {
             encoded += isDuplicate(c, str) ? ")" : "(";
         }
