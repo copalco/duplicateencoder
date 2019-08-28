@@ -10,12 +10,9 @@ public class DuplicateEncoder {
         String encoded = "";
         String lowerCaseStr = text.toLowerCase();
         for (String character: normalizedText.characters()) {
-            encoded += isDuplicate(character, lowerCaseStr) ? ")" : "(";
+            encoded += Text.isDuplicate(character, lowerCaseStr) ? ")" : "(";
         }
         return encoded;
     }
 
-    private static boolean isDuplicate(String character, String str) {
-        return str.indexOf(character) != str.lastIndexOf(character);
-    }
 }
