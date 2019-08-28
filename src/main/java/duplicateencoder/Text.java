@@ -1,5 +1,7 @@
 package duplicateencoder;
 
+import java.util.stream.Stream;
+
 public class Text {
     private String text;
 
@@ -17,5 +19,9 @@ public class Text {
 
     public String[] characters() {
         return text.split("");
+    }
+
+    public Stream<String> characterStream() {
+        return text.chars().mapToObj(c -> String.valueOf(c));
     }
 }

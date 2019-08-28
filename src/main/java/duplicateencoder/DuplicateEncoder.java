@@ -1,5 +1,7 @@
 package duplicateencoder;
 
+import java.util.stream.Stream;
+
 public class DuplicateEncoder {
 
     public static String encode(String text) {
@@ -12,6 +14,7 @@ public class DuplicateEncoder {
 
     private static String encode(Text normalizedText) {
         String encoded = "";
+        Stream<String> characterStream = normalizedText.characterStream();
         for (String character: normalizedText.characters()) {
             encoded += encode(character, normalizedText);
         }
