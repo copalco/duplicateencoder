@@ -10,4 +10,8 @@ public class Text {
     public boolean isEmpty() {
         return text.isEmpty();
     }
+
+    public String[] split(String s) {
+        return text.split(s);
+    }
 }
