@@ -9,9 +9,13 @@ public class DuplicateEncoder {
         }
         String encoded = "";
         for (String character: normalizedText.characters()) {
-            encoded += normalizedText.isDuplicate(character) ? ")" : "(";
+            encoded += encode(character, normalizedText);
         }
         return encoded;
+    }
+
+    private static String encode(String character, Text normalizedText) {
+        return normalizedText.isDuplicate(character) ? ")" : "(";
     }
 
 }
