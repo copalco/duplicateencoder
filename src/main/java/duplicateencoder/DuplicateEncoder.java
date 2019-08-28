@@ -13,8 +13,7 @@ public class DuplicateEncoder {
     }
 
     private static String encode(Text normalizedText) {
-        Stream<String> characterStream = normalizedText.characterStream();
-        return characterStream.map(c -> encode(c, normalizedText)).reduce("", String::concat);
+        return normalizedText.characterStream().map(c -> encode(c, normalizedText)).reduce("", String::concat);
     }
 
     private static String encode(String character, Text normalizedText) {
