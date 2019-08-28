@@ -1,7 +1,5 @@
 package duplicateencoder;
 
-import java.util.stream.Stream;
-
 public class DuplicateEncoder {
 
     public static String encode(String text) {
@@ -9,10 +7,6 @@ public class DuplicateEncoder {
         if (normalizedText.isEmpty()) {
             return "";
         }
-        return encode(normalizedText);
-    }
-
-    private static String encode(Text normalizedText) {
         return normalizedText.characterStream().map(c -> encode(c, normalizedText)).reduce("", String::concat);
     }
 
