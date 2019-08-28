@@ -15,10 +15,7 @@ public class DuplicateEncoder {
     private static String encode(Text normalizedText) {
         String encoded = "";
         Stream<String> characterStream = normalizedText.characterStream();
-        for (String character: normalizedText.characters()) {
-            encoded += encode(character, normalizedText);
-        }
-        return encoded;
+        return characterStream.map(c -> encode(c, normalizedText)).reduce("", String::concat);
     }
 
     private static String encode(String character, Text normalizedText) {
