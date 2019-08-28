@@ -23,6 +23,11 @@ public class TestDuplicateEncoder {
     }
 
     @Test
+    public void encodesCharsIgnoringCase() {
+        assertEquals(")()", encoder.encode("Pxp"));
+    }
+
+    @Test
     public void encodeNonUniqueCharsAsClosedParenthesis() {
         assertEquals("()()", encoder.encode("abcb"));
     }
