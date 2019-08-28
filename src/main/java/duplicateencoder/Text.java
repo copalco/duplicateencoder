@@ -12,6 +12,6 @@ public class Text {
     }
 
     public String[] split(String s) {
-        return text.split(s);
+        return text.split("");
     }
 }
