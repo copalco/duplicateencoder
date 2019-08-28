@@ -7,6 +7,7 @@ public class DuplicateEncoder {
             return "";
         }
         String encoded = "";
+        String lowerCaseStr = str.toLowerCase();
         for (String character: str.split("")) {
             encoded += isDuplicate(character, str) ? ")" : "(";
         }
