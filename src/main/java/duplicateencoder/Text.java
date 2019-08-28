@@ -6,4 +6,8 @@ public class Text {
     public Text(String text) {
         this.text = text;
     }
+
+    public boolean isEmpty() {
+        return text.isEmpty();
+    }
 }
