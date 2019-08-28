@@ -7,6 +7,10 @@ public class DuplicateEncoder {
         if (normalizedText.isEmpty()) {
             return "";
         }
+        return encode(normalizedText);
+    }
+
+    private static String encode(Text normalizedText) {
         String encoded = "";
         for (String character: normalizedText.characters()) {
             encoded += encode(character, normalizedText);
