@@ -2,7 +2,7 @@ package duplicateencoder;
 
 public class DuplicateEncoder {
 
-    public String encode(String str) {
+    public static String encode(String str) {
         if (str.isEmpty()) {
             return "";
         }
@@ -14,7 +14,7 @@ public class DuplicateEncoder {
         return encoded;
     }
 
-    private boolean isDuplicate(String character, String str) {
+    private static boolean isDuplicate(String character, String str) {
         return str.indexOf(character) != str.lastIndexOf(character);
     }
 }
