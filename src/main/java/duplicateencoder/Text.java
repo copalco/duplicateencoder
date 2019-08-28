@@ -8,7 +8,7 @@ public class Text {
     }
 
     public boolean isDuplicate(String character, String str) {
-        return str.indexOf(character) != str.lastIndexOf(character);
+        return text.indexOf(character) != text.lastIndexOf(character);
     }
 
     public boolean isEmpty() {
