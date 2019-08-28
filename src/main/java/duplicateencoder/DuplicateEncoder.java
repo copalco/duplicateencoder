@@ -2,12 +2,12 @@ package duplicateencoder;
 
 public class DuplicateEncoder {
 
-    public static String encode(String str) {
-        if (str.isEmpty()) {
+    public static String encode(String text) {
+        if (text.isEmpty()) {
             return "";
         }
         String encoded = "";
-        String lowerCaseStr = str.toLowerCase();
+        String lowerCaseStr = text.toLowerCase();
         for (String character: lowerCaseStr.split("")) {
             encoded += isDuplicate(character, lowerCaseStr) ? ")" : "(";
         }
