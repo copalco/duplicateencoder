@@ -1,4 +1,5 @@
 import duplicateencoder.DuplicateEncoder;
+import duplicateencoder.Text;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -32,4 +33,8 @@ public class TestDuplicateEncoder {
         assertEquals("()()", encoder.encode("abcb"));
     }
 
+    @Test
+    public void characterStream() {
+        assertEquals("pxp", new Text("Pxp").characterStream().reduce("", String::concat));
+    }
 }

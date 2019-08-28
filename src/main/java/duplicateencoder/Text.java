@@ -22,6 +22,6 @@ public class Text {
     }
 
     public Stream<String> characterStream() {
-        return text.chars().mapToObj(c -> String.valueOf(c));
+        return text.chars().mapToObj(c -> String.valueOf((char) c));
     }
 }
