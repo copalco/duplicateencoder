@@ -5,7 +5,7 @@ public class DuplicateEncoder {
     public static String encode(String text) {
         Text normalizedText = new Text(text);
         return normalizedText.characterStream()
-                .map(c -> encode(c, normalizedText))
+                .map(character -> encode(character, normalizedText))
                 .reduce("", String::concat);
     }
 
