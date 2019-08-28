@@ -7,7 +7,7 @@ public class Text {
         this.text = text.toLowerCase();
     }
 
-    public boolean isDuplicate(String character, String str) {
+    public boolean isDuplicate(String character) {
         return text.indexOf(character) != text.lastIndexOf(character);
     }
 
