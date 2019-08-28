@@ -11,7 +11,7 @@ public class Text {
         return text.isEmpty();
     }
 
-    public String[] split(String s) {
+    public String[] split() {
         return text.split("");
     }
 }
