@@ -3,6 +3,7 @@ package duplicateencoder;
 public class DuplicateEncoder {
 
     public static String encode(String text) {
+        Text normalizedText = new Text(text);
         if (text.isEmpty()) {
             return "";
         }
