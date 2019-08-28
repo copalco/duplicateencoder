@@ -4,9 +4,6 @@ public class DuplicateEncoder {
 
     public static String encode(String text) {
         Text normalizedText = new Text(text);
-        if (normalizedText.isEmpty()) {
-            return "";
-        }
         return normalizedText.characterStream().map(c -> encode(c, normalizedText)).reduce("", String::concat);
     }
 
